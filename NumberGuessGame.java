@@ -9,11 +9,15 @@ public class NumberGuessGame
        Scanner sc = new Scanner(System.in);
        Random num = new Random();
        int number = num.nextInt(101);
-        System.out.println("******Welcome To Number Guessing Game******");
-        System.out.println("Enter your Guess(upto 100):::");
+       int count=1;
+	System.out.println("\n\n\t\t\t\t**********************************");
+        System.out.println("\t\t\t\t  Welcome To Number Guessing Game");
+	System.out.println("\t\t\t\t**********************************");
+        System.out.println("\n\nEnter your Guess(upto 100):::");
         int guess = sc.nextInt();
         while(guess!=number)
         {
+            
             if(guess<number)
             {
                 System.out.println("GUESS HIGHER");
@@ -24,8 +28,9 @@ public class NumberGuessGame
                 System.out.println("GUESS LOWER");
                  guess=sc.nextInt();
             }
+            count++;
         }
-        System.out.println("!!!!!!!!CONGRATULATIONS YOU HAVE GUESSED CORRECTLY!!!!!!!");
+        System.out.println("\t\t\t!!!!!!!!CONGRATULATIONS YOU HAVE GUESSED CORRECTLY!!!!!!!");
+        System.out.println("\t\t\t\tIt Took You "+count+" tries to correctly guess");
     }
 }
-   
